@@ -33,7 +33,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
         setIsLoading(true);
         setError(null);
         const response = await axios.get(
-          `http://www.omdbapi.com/?apikey=${api_key}&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=${api_key}&i=${selectedId}`
         );
         setMovie(response.data);
       } catch (err) {

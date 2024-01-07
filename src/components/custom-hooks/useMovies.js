@@ -13,7 +13,7 @@ const useMovies = (query) => {
         setIsLoading(true);
         setError("");
         const response = await axios.get(
-          `http://www.omdbapi.com/?apikey=${api_key}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${api_key}&s=${query}`
         );
         if (response.data && response.data.Search) {
           setMovies(response.data.Search);
